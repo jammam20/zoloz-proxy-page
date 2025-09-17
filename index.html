@@ -21,7 +21,10 @@
   <button id="openIframe">Open iframe</button>
   <button id="doFetch">Send fetch request (may be blocked by CORS)</button>
   <div id="messages"></div>
-
+  <iframe id="targetFrame" 
+    sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
+    allow="camera; microphone">
+  </iframe>
   <iframe id="targetFrame" sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
 
   <h3>Debug / Response</h3>
@@ -93,3 +96,4 @@
   -->
 </body>
 </html>
+
