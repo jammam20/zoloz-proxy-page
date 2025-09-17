@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zoloz Quick Share (Test)</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Arial;line-height:1.4;padding:14px}
+    input,textarea,button{width:100%;box-sizing:border-box;margin:6px 0;padding:8px}
+    iframe{width:100%;height:420px;border:1px solid #ddd;margin-top:8px}
+    pre{background:#f6f6f6;padding:8px;overflow:auto}
+  </style>
+</head>
+<body>
+  <h2>Zoloz Quick Share — تجريبي</h2>
+  <p>الصفحة دي بتحاول تفتح نفس الـ request اللي بعتته لـ Zoloz. افتحها من موبايل أخوك واضغط "Open iframe" أو "Send fetch".</p>
+
+  <label>Request URL (معبّى من عندك):</label>
+  <textarea id="url" rows="3">https://hk-production-cdn.zoloz.net/page/face-fe/index.html?clientcfg=eyJzaWduIjoianhkaVpMNDh6VFRoR1F3VGRsOEQ1N3RjUWZNMDI1ZEM1RVh1YnVWazFRTjBwSFByUFZnaStpaTZkQktsaklPMlZkVU1raXFMNVFSQVhOMHYvRlFyTU9xYVhDQmlFbTZWOXA0djZrbFpCSGxiOVJqZ2xsOEJHM2VXcDVNdkRjNHJZU0F6MzdCRHdWQlNvTnBlcitNVHVzU1FzWGEzaGQvcmlDOWp3WnRXeUVJM3VxUWhpenl3NjNmdHlDRUFMeFFtb3Nxek5qclRkTVBZWHBBaGpZUlBsVi9Ic0g2aVJKeHlLZHdvTTBDKy90cUVTRlYxSUNKU3pwN3BQVURsS0JoSG41MDdlZmpMS0VQbW9DbCtDNEc1YXhnOGV6UHdqQkhnSWNUY2x4c3BzcTh5TUhFNGl5SXA3dTZtMUJVMEliQmpqYjZzN0FJNlRFWU5MbE54VGljRnhBPT0iLCJjb250ZW50Ijoie1wiR0FURVdBWV9VUkxcIjpcImh0dHBzOi8vaGstcHJvZHVjdGlvbi16bWdzLWFjYy56b2xvei5uZXQvem1ncy92Mi9zZWNcIixcIkFQUF9JRFwiOlwiXCIsXCJpc0lmcmFtZVwiOnRydWUsXCJjbGllbnRJZFwiOlwiMjE4ODQxODc2NDQzNzEzNFwiLFwidXNlWG5uR3JleVN3aXRjaFwiOmZhbHNlLFwia2V5TWV0YVwiOlwie1xcXCJtaWRcXFwiOlxcXCIzMDM4OFxcXCIsXFxcImtleVZlclxcXCI6XFxcInYxXFxcIn1cIixcImRlc2t0b3BNb2RlXCI6XCJOXCIsXCJsb2NhbGVcIjpcImVuXCIsXCJpbnRlcnJ1cHRDYWxsYmFja1VybFwiOlwiaHR0cHM6Ly9hcGkuYnliaXQuY29tL3YxL2t5Yy1wcm92aWRlci9jYWxsYmFjaz9wcm92aWRlcj16b2xvelwiLFwiV09SS1NQQUNFX0lEXCI6XCJcIixcInVzZVRveWdlclR5cGVcIjpcInhublwiLFwiemltSWRcIjpcIkcwMDAwMDAwMDY2Mzk2YjVlZGZjYWU5OTBmMDJkNjI4M2M0ZGJlZDRhOVwiLFwidWlDZmdcIjpcIntcXFwiaXNEZXNrdG9wSDVcXFwiOlxcXCJZXFxcIn1cIixcImlzRGVza3RvcFwiOlwiTlwiLFwiaXNEZXNrdG9wSDVcIjpcIllcIixcImVuYWJsZVVwbG9hZFwiOlwiTlwiLFwiTkVBUlhfR0FURVdBWV9VUkxcIjpcImh0dHBzOi8vbmVhcngtaGstc2FpbC1hcGkuem9sb3ouY29tL3dlYi9yZXBvcnQuanNvblwiLFwic3RhdGVcIjpcIkcwMDAwMDAwMDZGRkMyMDI1MDkxNzAwMDAwMDg4ODc1ODQzNjk4OFwiLFwiY29tcGxldGVDYWxsYmFja1VybFwiOlwiaHR0cHM6Ly9hcGkuYnliaXQuY29tL3YxL2t5Yy1wcm92aWRlci9jYWxsYmFjaz9wcm92aWRlcj16b2xvelwiLFwiQzJTX1BVQl9LRVlcIjpcIk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBa3FpazdFOExWdUdwZVBHWDA3dWxLU1pZMmt0eWNKNkY4cmZ5TThJa2twd1k4ZHJQakY2UXBQSUl1RWRLakZnU05lVWV5V0N4WVF6Q3l4NkdDcitBT3lNMThib3IvWXNtS1IvYkFpWkRwNG5HK1dJeFBhT2lGdm5tOWRCS09Md0hzbTc3Z3lZM2FQR3ZpNVhPdGg3QnZ4NlhwblVCUXlJam5XcGVIYUFxTzhGQi9uZHZDL2JqN0ZQMDQwd09rdWJrdk5RTUdHN1ppYng0ZGV0MEhjc0JTVUtXYUdZYWk3RjNobWdzaW15M0VCeDR4aHZEUkEwRmZNY1dEZ3p2bEEwejhnNWtuWUMxbEx1cFFtenN1N1RKYnVzbWpVUnBsTDBLT1FTS3haYWpnVEpST01QaTJ3ZE81bHhyWjZab2thYkY4bmpPU3JLSkV6ZnJ0UGhLRkNsUG9RSURBUUFCXCIsXCJSRU1PVEVMT0dfVVJMXCI6XCJodHRwczovL2hrLXByb2R1Y3Rpb24tem1ncy56b2xvei5uZXQvbG9nZ3cvbG9nVXBsb2FkLmRvXCJ9In0=</textarea>
+
+  <button id="openIframe">Open iframe</button>
+  <button id="doFetch">Send fetch request (may be blocked by CORS)</button>
+  <div id="messages"></div>
+
+  <iframe id="targetFrame" sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
+
+  <h3>Debug / Response</h3>
+  <pre id="output">Ready</pre>
+
+  <script>
+    const urlEl = document.getElementById('url');
+    const out = document.getElementById('output');
+    const msg = document.getElementById('messages');
+    const frame = document.getElementById('targetFrame');
+
+    document.getElementById('openIframe').addEventListener('click', ()=>{
+      const u = urlEl.value.trim();
+      if(!u){alert('حط اللينك الأول');return}
+      out.textContent = 'Opening iframe...';
+      frame.src = u;
+      msg.innerHTML = '<small>Opened in iframe — لو ظهر محتوى يبقى حلو. لو فاضي، ممكن السيرفر منع الـ iframe أو محتاج نفس session.</small>';
+    });
+
+    document.getElementById('doFetch').addEventListener('click', async ()=>{
+      const u = urlEl.value.trim();
+      if(!u){alert('حط اللينك الأول');return}
+      out.textContent = 'Sending fetch... (this often fails because of CORS)';
+      try{
+        const r = await fetch(u, {method:'GET', mode:'cors', credentials:'include'});
+        const txt = await r.text();
+        out.textContent = `Status: ${r.status} \n--- RESPONSE START ---\n${txt.slice(0,2000)}\n--- RESPONSE END ---`;
+      }catch(e){
+        out.textContent = 'Fetch failed: '+e.message + '\nThis is normal if the remote server disallows CORS or requires special signed headers/session.';
+      }
+    });
+  </script>
+
+  <!--
+    NOTES & next steps (موجودة هنا كتعليمات داخل الملف):
+
+    1) Expected behavior:
+       - If the iframe shows the Zoloz UI and your brother can do the face flow, and the original session is linked to that flow on server-side, then success.
+       - If iframe is blocked (blank) or fetch returns CORS error, the remote server is blocking cross-origin requests.
+
+    2) How to host this quickly:
+       - GitHub Pages: create a repo, add this file as index.html, publish Pages.
+       - Or on your PC run: python3 -m http.server 8000  (then open http://<your-pc-ip>:8000 on mobile)
+
+    3) If fetch/iframe are blocked, next reliable option is a small Node.js proxy server that forwards the request from your server-side to Zoloz (server-side requests are not subject to browser CORS). Example minimal proxy (Node/Express):
+
+    // proxy.js (Node)
+    /*
+    const express = require('express');
+    const fetch = (...args)=>import('node-fetch').then(m=>m.default(...args));
+    const app = express();
+    app.use(express.json());
+    app.post('/forward', async (req,res)=>{
+      const target = req.body.url; // validate this!
+      try{
+        const r = await fetch(target, {method:'GET', headers: { /* copy any headers if needed */ }});
+        const text = await r.text();
+        res.status(r.status).send(text);
+      }catch(err){
+        res.status(500).send('proxy error: '+err.message);
+      }
+    });
+    app.listen(3000, ()=>console.log('proxy up on 3000'));
+    */
+
+    4) Security & legality reminder:
+       - Don't share sensitive session tokens or the HAR file publicly.
+       - Using a proxy to impersonate sessions can violate terms of service. Use this only for legitimate/support purposes.
+  -->
+</body>
+</html>
